@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VLSI Study Materials</title>
+</head>
+
+<body>
+
+    <h1>VLSI Study Materials</h1>
+
+    <button onclick="openPdf('Introduction to VLSI.pdf')">
+        Introduction to VLSI
+    </button>
+
+    <br><br>
+
+    <button onclick="openPdf('Introduction to CMOS.pdf')">
+        CMOS
+    </button>
+
+    <br><br>
+
+    <button onclick="openPdf('Raspberry Pi .pdf')">
+        Raspberry Pi
+    </button>
+
+
+    <script>
+
+        async function openPdf(fileName) {
+
+            const apiUrl =
+                "http://localhost:8080/api/study-material/vlsi/"
+                + encodeURIComponent(fileName);
+
+            console.log("Calling:", apiUrl);
+
+            try {
+
+                const response = await fetch(apiUrl);
+
+                console.log("Status:", response.status);
+
+                if (!response.ok) {
+                    throw new Error("Backend returned " + response.status);
+                }
+
+                const material = await response.json();
+
+                console.log("Response:", material);
+
+                window.open(material.url, "_blank");
+
+            } catch (error) {
+
+                console.error("ERROR:", error);
+
+                alert("Unable to open PDF. Check browser console.");
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

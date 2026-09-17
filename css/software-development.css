@@ -1,0 +1,2428 @@
+
+/* =========================================================
+   ECE COMMUNITY
+   SOFTWARE DEVELOPMENT PAGE
+   software-development.css
+
+   IMPORTANT:
+   Load this file AFTER style.css
+========================================================= */
+
+
+/* =========================================================
+   01. PAGE VARIABLES
+========================================================= */
+
+.software-page {
+    --sd-navy: #0f1b3d;
+    --sd-navy-deep: #0a122d;
+    --sd-blue: #304095;
+    --sd-blue-dark: #263477;
+    --sd-blue-light: #eef1ff;
+    --sd-accent: #ff5a5f;
+    --sd-accent-dark: #df454b;
+
+    --sd-white: #ffffff;
+    --sd-warm-white: #f7f5ef;
+    --sd-soft-white: #fbfaf7;
+    --sd-light: #f1f3f8;
+
+    --sd-text: #15213d;
+    --sd-text-soft: #5f687b;
+    --sd-text-light: #7a8394;
+
+    --sd-border: #e2e5ec;
+    --sd-border-dark: #cdd2df;
+
+    --sd-shadow-sm: 0 8px 25px rgba(15, 27, 61, 0.07);
+    --sd-shadow-md: 0 18px 45px rgba(15, 27, 61, 0.10);
+    --sd-shadow-lg: 0 28px 70px rgba(15, 27, 61, 0.14);
+
+    --sd-radius-sm: 8px;
+    --sd-radius-md: 14px;
+    --sd-radius-lg: 22px;
+
+    --sd-container: 1180px;
+
+    --sd-display:
+        "DM Serif Display",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    --sd-body:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================================
+   02. RESET
+========================================================= */
+
+.software-page,
+.software-page * {
+    box-sizing: border-box;
+}
+
+.software-page {
+    margin: 0;
+    padding: 0;
+
+    background: var(--sd-soft-white);
+    color: var(--sd-text);
+
+    font-family: var(--sd-body);
+    font-size: 16px;
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+.software-page img {
+    max-width: 100%;
+    display: block;
+}
+
+.software-page a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.software-page button,
+.software-page input,
+.software-page textarea,
+.software-page select {
+    font: inherit;
+}
+
+.software-page button {
+    cursor: pointer;
+}
+
+.software-page h1,
+.software-page h2,
+.software-page h3,
+.software-page h4,
+.software-page p {
+    margin-top: 0;
+}
+
+.software-page ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* =========================================================
+   03. GLOBAL CONTAINER
+========================================================= */
+
+.software-page .container,
+.software-page .sd-container {
+    width: min(var(--sd-container), calc(100% - 48px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   04. TOP BAR
+========================================================= */
+
+.software-page .top-bar {
+    width: 100%;
+    min-height: 52px;
+
+    background: var(--sd-navy);
+    color: var(--sd-white);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.software-page .top-bar-inner {
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.software-page .top-bar-left,
+.software-page .top-bar-right {
+    display: flex;
+    align-items: center;
+}
+
+.software-page .top-bar-left {
+    gap: 12px;
+}
+
+.software-page .top-bar-left span {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.software-page .top-bar-left i {
+    color: #aeb9ff;
+}
+
+.software-page .top-bar-right {
+    gap: 22px;
+}
+
+.software-page .top-bar-right > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.software-page .top-bar-right > a:hover {
+    color: var(--sd-white);
+}
+
+.software-page .top-bar-right > a i {
+    color: #aeb9ff;
+}
+
+.software-page .social-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.software-page .social-links a {
+    width: 38px;
+    height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 50%;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.software-page .social-links a:hover {
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(255, 255, 255, 0.30);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   05. MAIN HEADER
+========================================================= */
+
+.software-page .main-header {
+    position: relative;
+    z-index: 50;
+
+    background: var(--sd-white);
+    border-bottom: 1px solid var(--sd-border);
+}
+
+.software-page .header-inner {
+    min-height: 94px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+}
+
+.software-page .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+
+    flex-shrink: 0;
+}
+
+.software-page .brand-mark {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: var(--sd-navy);
+    color: var(--sd-white);
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.software-page .brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.software-page .brand-text strong {
+    color: var(--sd-navy);
+
+    font-size: 17px;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.software-page .brand-text span {
+    color: var(--sd-text-soft);
+
+    font-size: 10px;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+.software-page .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 28px;
+}
+
+.software-page .main-nav > a:not(.btn) {
+    position: relative;
+
+    color: var(--sd-navy);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    padding: 34px 0;
+
+    transition: color 0.25s ease;
+}
+
+.software-page .main-nav > a:not(.btn)::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 24px;
+
+    height: 2px;
+
+    background: var(--sd-accent);
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.25s ease;
+}
+
+.software-page .main-nav > a:not(.btn):hover,
+.software-page .main-nav > a.active {
+    color: var(--sd-blue);
+}
+
+.software-page .main-nav > a:not(.btn):hover::after,
+.software-page .main-nav > a.active::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   06. HEADER BUTTON
+========================================================= */
+
+.software-page .main-nav .btn {
+    min-height: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 27px;
+
+    border-radius: 7px;
+
+    background: var(--sd-blue);
+    color: var(--sd-white);
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.software-page .main-nav .btn:hover {
+    background: var(--sd-blue-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--sd-shadow-sm);
+}
+
+
+/* =========================================================
+   07. MOBILE MENU
+========================================================= */
+
+.software-page .mobile-menu-btn {
+    display: none;
+
+    width: 46px;
+    height: 46px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--sd-border);
+    border-radius: 8px;
+
+    background: var(--sd-white);
+    color: var(--sd-navy);
+
+    font-size: 18px;
+}
+
+.software-page .mobile-drawer {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+    max-width: 380px;
+
+    padding: 28px;
+
+    background: var(--sd-white);
+
+    box-shadow: 15px 0 60px rgba(0, 0, 0, 0.18);
+
+    transform: translateX(-105%);
+    visibility: hidden;
+
+    transition:
+        transform 0.35s ease,
+        visibility 0.35s ease;
+}
+
+.software-page .mobile-drawer.active {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.software-page .mobile-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 24px;
+
+    border-bottom: 1px solid var(--sd-border);
+}
+
+.software-page .mobile-drawer-close {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--sd-border);
+    border-radius: 8px;
+
+    background: var(--sd-white);
+    color: var(--sd-navy);
+
+    font-size: 17px;
+}
+
+.software-page .mobile-nav {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 25px;
+
+    gap: 4px;
+}
+
+.software-page .mobile-nav > a {
+    display: flex;
+    align-items: center;
+
+    min-height: 52px;
+    padding: 0 15px;
+
+    border-radius: 8px;
+
+    color: var(--sd-navy);
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.software-page .mobile-nav > a:hover {
+    background: var(--sd-light);
+}
+
+.software-page .mobile-nav .btn {
+    justify-content: center;
+
+    margin-top: 18px;
+
+    background: var(--sd-blue);
+    color: var(--sd-white);
+}
+
+
+/* =========================================================
+   08. ANNOUNCEMENT
+========================================================= */
+
+.software-page .sd-announcement {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    padding: 12px 24px;
+
+    background: var(--sd-warm-white);
+    border-bottom: 1px solid var(--sd-border);
+
+    color: var(--sd-navy);
+
+    font-size: 13px;
+}
+
+.software-page .sd-announcement-label {
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.software-page .sd-announcement-text {
+    color: var(--sd-text-soft);
+}
+
+.software-page .sd-announcement-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--sd-blue);
+
+    font-weight: 800;
+
+    transition:
+        color 0.25s ease,
+        gap 0.25s ease;
+}
+
+.software-page .sd-announcement-link:hover {
+    color: var(--sd-accent-dark);
+    gap: 10px;
+}
+
+
+/* =========================================================
+   09. HERO
+========================================================= */
+
+.software-page .sd-hero {
+    position: relative;
+
+    min-height: 590px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0b1533 0%,
+            #101e47 58%,
+            #17285b 100%
+        );
+
+    color: var(--sd-white);
+
+    overflow: hidden;
+}
+
+.software-page .sd-hero::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 42%;
+    height: 100%;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.07);
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.025) 100%
+        );
+
+    pointer-events: none;
+}
+
+.software-page .sd-hero::after {
+    content: "";
+
+    position: absolute;
+    right: 8%;
+    bottom: -180px;
+
+    width: 390px;
+    height: 390px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 60px rgba(255, 255, 255, 0.015),
+        0 0 0 120px rgba(255, 255, 255, 0.01);
+
+    pointer-events: none;
+}
+
+.software-page .sd-hero-inner {
+    position: relative;
+    z-index: 2;
+
+    width: min(var(--sd-container), calc(100% - 48px));
+
+    margin: 0 auto;
+
+    padding: 100px 0;
+}
+
+.software-page .sd-hero-label {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    color: #b8c1ff;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+.software-page .sd-hero-label::before {
+    content: "";
+
+    width: 30px;
+    height: 2px;
+
+    margin-right: 12px;
+
+    background: var(--sd-accent);
+}
+
+.software-page .sd-hero-title {
+    max-width: 900px;
+
+    margin: 0 0 25px;
+
+    color: var(--sd-white);
+
+    font-family: var(--sd-display);
+
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 1.02;
+    font-weight: 400;
+    letter-spacing: -0.035em;
+}
+
+.software-page .sd-hero-title span {
+    display: inline;
+    color: #b9c2ff;
+}
+
+.software-page .sd-hero-description {
+    max-width: 760px;
+
+    margin-bottom: 34px;
+
+    color: rgba(255, 255, 255, 0.76);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.software-page .sd-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.software-page .sd-hero-btn {
+    min-height: 52px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 0 24px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.software-page .sd-hero-btn-primary {
+    background: var(--sd-accent);
+    color: var(--sd-white);
+}
+
+.software-page .sd-hero-btn-primary:hover {
+    background: var(--sd-accent-dark);
+    transform: translateY(-2px);
+}
+
+.software-page .sd-hero-btn-outline {
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    color: var(--sd-white);
+}
+
+.software-page .sd-hero-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================================
+   10. SHARED SECTION LABELS
+========================================================= */
+
+.software-page .sd-section-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--sd-blue);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.software-page .sd-section-label::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 24px;
+    height: 2px;
+
+    margin-right: 9px;
+
+    vertical-align: middle;
+
+    background: var(--sd-accent);
+}
+
+.software-page .sd-section-title {
+    margin: 0;
+
+    color: var(--sd-navy);
+
+    font-family: var(--sd-display);
+
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+}
+
+.software-page .sd-section-title em {
+    color: var(--sd-blue);
+    font-style: normal;
+}
+
+
+/* =========================================================
+   11. INTRODUCTION
+========================================================= */
+
+.software-page .sd-intro {
+    padding: 105px 0;
+
+    background: var(--sd-white);
+
+    border-bottom: 1px solid var(--sd-border);
+}
+
+.software-page .sd-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+    gap: 90px;
+
+    align-items: start;
+}
+
+.software-page .sd-intro-content {
+    padding-top: 7px;
+}
+
+.software-page .sd-intro-content p {
+    margin: 0 0 20px;
+
+    color: var(--sd-text-soft);
+
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.software-page .sd-intro-highlight {
+    margin-top: 30px;
+    padding: 19px 22px;
+
+    border-left: 3px solid var(--sd-accent);
+
+    background: var(--sd-warm-white);
+
+    color: var(--sd-navy);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   12. LEARNING ROADMAP
+========================================================= */
+
+.software-page .sd-roadmap {
+    padding: 110px 0;
+
+    background: var(--sd-soft-white);
+}
+
+.software-page .sd-roadmap-heading {
+    max-width: 720px;
+
+    margin-bottom: 48px;
+}
+
+.software-page .sd-roadmap-heading p {
+    margin: 19px 0 0;
+
+    color: var(--sd-text-soft);
+
+    font-size: 15px;
+}
+
+.software-page .sd-roadmap-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.software-page .sd-roadmap-card {
+    position: relative;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px;
+
+    background: var(--sd-white);
+
+    border: 1px solid var(--sd-border);
+    border-radius: var(--sd-radius-md);
+
+    box-shadow: 0 2px 0 rgba(15, 27, 61, 0.01);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.software-page .sd-roadmap-card::after {
+    content: "";
+
+    position: absolute;
+    right: -45px;
+    bottom: -45px;
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    background: var(--sd-blue-light);
+
+    transition: transform 0.35s ease;
+}
+
+.software-page .sd-roadmap-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c8ceeb;
+
+    box-shadow: var(--sd-shadow-md);
+}
+
+.software-page .sd-roadmap-card:hover::after {
+    transform: scale(1.35);
+}
+
+.software-page .sd-roadmap-number {
+    position: absolute;
+    top: 25px;
+    right: 27px;
+
+    color: #c4c9d6;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.software-page .sd-roadmap-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 10px;
+
+    background: var(--sd-blue-light);
+    color: var(--sd-blue);
+
+    font-size: 19px;
+}
+
+.software-page .sd-roadmap-card h3 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 10px;
+
+    color: var(--sd-navy);
+
+    font-size: 21px;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.software-page .sd-roadmap-card p {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 22px;
+
+    color: var(--sd-text-soft);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.software-page .sd-roadmap-link {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: auto;
+
+    color: var(--sd-blue);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+
+    transition:
+        color 0.25s ease,
+        gap 0.25s ease;
+}
+
+.software-page .sd-roadmap-link:hover {
+    color: var(--sd-accent-dark);
+    gap: 12px;
+}
+
+
+/* =========================================================
+   13. RESOURCES
+========================================================= */
+
+.software-page .sd-resources {
+    padding: 110px 0;
+
+    background: var(--sd-white);
+
+    border-top: 1px solid var(--sd-border);
+}
+
+.software-page .sd-resources-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.7fr);
+
+    gap: 80px;
+
+    align-items: end;
+
+    margin-bottom: 50px;
+}
+
+.software-page .sd-resources-heading-text p {
+    margin: 0;
+
+    color: var(--sd-text-soft);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.software-page .sd-resource-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.software-page .sd-resource-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 285px;
+
+    padding: 29px;
+
+    border: 1px solid var(--sd-border);
+    border-radius: var(--sd-radius-md);
+
+    background: var(--sd-soft-white);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.software-page .sd-resource-card:hover {
+    transform: translateY(-5px);
+
+    background: var(--sd-white);
+
+    border-color: #c7cde8;
+
+    box-shadow: var(--sd-shadow-md);
+}
+
+.software-page .sd-resource-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 23px;
+
+    border-radius: 9px;
+
+    background: var(--sd-navy);
+    color: var(--sd-white);
+
+    font-size: 17px;
+}
+
+.software-page .sd-resource-card h3 {
+    margin: 0 0 10px;
+
+    color: var(--sd-navy);
+
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.software-page .sd-resource-card p {
+    margin: 0 0 25px;
+
+    color: var(--sd-text-soft);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.software-page .sd-resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: auto;
+
+    color: var(--sd-blue);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+
+    transition:
+        color 0.25s ease,
+        gap 0.25s ease;
+}
+
+.software-page .sd-resource-card:hover .sd-resource-link {
+    color: var(--sd-accent-dark);
+    gap: 12px;
+}
+
+
+/* =========================================================
+   14. LEARNING MATERIAL
+========================================================= */
+
+.software-page .sd-learning-material {
+    padding: 90px 0;
+
+    background: var(--sd-warm-white);
+}
+
+.software-page .sd-material-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.software-page .sd-material-card {
+    position: relative;
+
+    padding: 38px;
+
+    border-radius: var(--sd-radius-lg);
+
+    background: var(--sd-white);
+
+    border: 1px solid var(--sd-border);
+
+    overflow: hidden;
+}
+
+.software-page .sd-material-card::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--sd-blue);
+}
+
+.software-page .sd-material-card.videos::before {
+    background: var(--sd-accent);
+}
+
+.software-page .sd-material-number {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: var(--sd-text-light);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.software-page .sd-material-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 12px;
+
+    background: var(--sd-blue-light);
+    color: var(--sd-blue);
+
+    font-size: 20px;
+}
+
+.software-page .sd-material-card.videos .sd-material-icon {
+    background: #fff0f0;
+    color: var(--sd-accent-dark);
+}
+
+.software-page .sd-material-card h3 {
+    margin: 0 0 12px;
+
+    color: var(--sd-navy);
+
+    font-family: var(--sd-display);
+
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 400;
+}
+
+.software-page .sd-material-card p {
+    max-width: 540px;
+
+    margin: 0 0 25px;
+
+    color: var(--sd-text-soft);
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.software-page .sd-material-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    min-height: 44px;
+    padding: 0 17px;
+
+    border: 1px solid var(--sd-border);
+    border-radius: 6px;
+
+    color: var(--sd-navy);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.software-page .sd-material-btn:hover {
+    background: var(--sd-blue);
+    border-color: var(--sd-blue);
+    color: var(--sd-white);
+}
+
+
+/* =========================================================
+   15. PROJECTS
+========================================================= */
+
+.software-page .sd-projects {
+    padding: 110px 0;
+
+    background: var(--sd-white);
+}
+
+.software-page .sd-project-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.65fr);
+
+    gap: 80px;
+
+    align-items: end;
+
+    margin-bottom: 48px;
+}
+
+.software-page .sd-project-heading > p {
+    margin: 0;
+
+    color: var(--sd-text-soft);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.software-page .sd-project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.software-page .sd-project-card {
+    min-height: 330px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--sd-border);
+    border-radius: var(--sd-radius-md);
+
+    background: var(--sd-soft-white);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.software-page .sd-project-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c7cde8;
+
+    box-shadow: var(--sd-shadow-md);
+}
+
+.software-page .sd-project-top {
+    min-height: 90px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 20px 25px;
+
+    background: var(--sd-navy);
+}
+
+.software-page .sd-project-card:nth-child(2) .sd-project-top {
+    background: var(--sd-blue);
+}
+
+.software-page .sd-project-card:nth-child(3) .sd-project-top {
+    background: #202c56;
+}
+
+.software-page .sd-project-category {
+    color: rgba(255, 255, 255, 0.76);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.software-page .sd-project-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: 28px 25px;
+}
+
+.software-page .sd-project-content h3 {
+    margin: 0 0 11px;
+
+    color: var(--sd-navy);
+
+    font-size: 21px;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.software-page .sd-project-content p {
+    margin: 0 0 25px;
+
+    color: var(--sd-text-soft);
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.software-page .sd-project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: auto;
+
+    color: var(--sd-blue);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+
+    transition:
+        color 0.25s ease,
+        gap 0.25s ease;
+}
+
+.software-page .sd-project-link:hover {
+    color: var(--sd-accent-dark);
+    gap: 12px;
+}
+
+
+/* =========================================================
+   16. EXPERT GUIDANCE
+========================================================= */
+
+.software-page .sd-expert {
+    padding: 100px 0;
+
+    background: var(--sd-soft-white);
+}
+
+.software-page .sd-expert-box {
+    display: grid;
+
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+
+    gap: 80px;
+
+    padding: 60px;
+
+    border-radius: var(--sd-radius-lg);
+
+    background: var(--sd-navy);
+
+    color: var(--sd-white);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.software-page .sd-expert-box::after {
+    content: "";
+
+    position: absolute;
+    right: -130px;
+    top: -130px;
+
+    width: 360px;
+    height: 360px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 55px rgba(255, 255, 255, 0.015),
+        0 0 0 110px rgba(255, 255, 255, 0.01);
+}
+
+.software-page .sd-expert-intro,
+.software-page .sd-expert-content {
+    position: relative;
+    z-index: 2;
+}
+
+.software-page .sd-expert-intro .sd-section-label {
+    color: #aeb9ff;
+}
+
+.software-page .sd-expert-intro h2 {
+    max-width: 400px;
+
+    margin: 0 0 20px;
+
+    color: var(--sd-white);
+
+    font-family: var(--sd-display);
+
+    font-size: clamp(38px, 4vw, 54px);
+    line-height: 1.05;
+    font-weight: 400;
+}
+
+.software-page .sd-expert-intro h2 em {
+    color: #b8c1ff;
+    font-style: normal;
+}
+
+.software-page .sd-expert-intro p {
+    max-width: 430px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.software-page .sd-expert-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px 25px;
+}
+
+.software-page .sd-expert-list li {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+.software-page .sd-expert-list-icon {
+    flex: 0 0 auto;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.05);
+    color: #b8c1ff;
+
+    font-size: 14px;
+}
+
+.software-page .sd-expert-list h3 {
+    margin: 0 0 5px;
+
+    color: var(--sd-white);
+
+    font-size: 15px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.software-page .sd-expert-list p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.60);
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   17. SKILLS
+========================================================= */
+
+.software-page .sd-skills {
+    padding: 55px 0;
+
+    background: var(--sd-white);
+
+    border-top: 1px solid var(--sd-border);
+    border-bottom: 1px solid var(--sd-border);
+}
+
+.software-page .sd-skills-heading {
+    margin-bottom: 22px;
+
+    color: var(--sd-text-light);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+
+    text-align: center;
+}
+
+.software-page .sd-skills-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.software-page .sd-skill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+
+    padding: 0 15px;
+
+    border: 1px solid var(--sd-border);
+    border-radius: 5px;
+
+    background: var(--sd-soft-white);
+
+    color: var(--sd-navy);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.software-page .sd-skill:hover {
+    background: var(--sd-blue-light);
+    border-color: #c9cfec;
+    color: var(--sd-blue);
+}
+
+
+/* =========================================================
+   18. FINAL CTA
+========================================================= */
+
+.software-page .sd-final-cta {
+    padding: 100px 0;
+
+    background: var(--sd-warm-white);
+}
+
+.software-page .sd-final-cta-box {
+    position: relative;
+
+    min-height: 360px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px;
+
+    border-radius: var(--sd-radius-lg);
+
+    background:
+        linear-gradient(
+            110deg,
+            var(--sd-navy-deep),
+            var(--sd-navy)
+        );
+
+    overflow: hidden;
+}
+
+.software-page .sd-final-cta-box::before {
+    content: "";
+
+    position: absolute;
+    right: -110px;
+    top: -170px;
+
+    width: 420px;
+    height: 420px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 55px rgba(255, 255, 255, 0.015),
+        0 0 0 110px rgba(255, 255, 255, 0.01);
+}
+
+.software-page .sd-final-cta-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 720px;
+}
+
+.software-page .sd-final-cta-label {
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: #aeb9ff;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.software-page .sd-final-cta-title {
+    margin: 0 0 18px;
+
+    color: var(--sd-white);
+
+    font-family: var(--sd-display);
+
+    font-size: clamp(40px, 5vw, 62px);
+    line-height: 1.05;
+    font-weight: 400;
+}
+
+.software-page .sd-final-cta-title em {
+    color: #b8c1ff;
+    font-style: normal;
+}
+
+.software-page .sd-final-cta-text {
+    max-width: 600px;
+
+    margin: 0 0 30px;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.software-page .sd-final-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.software-page .sd-final-btn {
+    min-height: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 0 22px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.software-page .sd-final-btn-primary {
+    background: var(--sd-accent);
+    color: var(--sd-white);
+}
+
+.software-page .sd-final-btn-primary:hover {
+    background: var(--sd-accent-dark);
+    transform: translateY(-2px);
+}
+
+.software-page .sd-final-btn-outline {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: var(--sd-white);
+}
+
+.software-page .sd-final-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.42);
+}
+
+
+/* =========================================================
+   19. FOOTER
+========================================================= */
+
+.software-page .site-footer {
+    padding: 75px 0 0;
+
+    background: var(--sd-navy-deep);
+
+    color: var(--sd-white);
+}
+
+.software-page .site-footer .brand-mark {
+    background: var(--sd-white);
+    color: var(--sd-navy);
+}
+
+.software-page .site-footer .brand-text strong {
+    color: var(--sd-white);
+}
+
+.software-page .site-footer .brand-text span {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.software-page .footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 1.5fr)
+        repeat(3, minmax(130px, 0.7fr));
+
+    gap: 60px;
+
+    padding-bottom: 60px;
+}
+
+.software-page .footer-brand > p {
+    max-width: 390px;
+
+    margin: 25px 0 0;
+
+    color: rgba(255, 255, 255, 0.56);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.software-page .footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.software-page .footer-column h4 {
+    margin: 0 0 10px;
+
+    color: var(--sd-white);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.software-page .footer-column a {
+    color: rgba(255, 255, 255, 0.56);
+
+    font-size: 12px;
+    line-height: 1.55;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.software-page .footer-column a:hover {
+    color: var(--sd-white);
+    transform: translateX(3px);
+}
+
+.software-page .footer-bottom {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.software-page .footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.40);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   20. GENERIC BUTTON COMPATIBILITY
+========================================================= */
+
+.software-page .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.software-page .btn-primary {
+    background: var(--sd-blue);
+    color: var(--sd-white);
+}
+
+
+/* =========================================================
+   21. SELECTION
+========================================================= */
+
+.software-page ::selection {
+    background: var(--sd-blue);
+    color: var(--sd-white);
+}
+
+
+/* =========================================================
+   22. FOCUS
+========================================================= */
+
+.software-page a:focus-visible,
+.software-page button:focus-visible {
+    outline: 3px solid rgba(48, 64, 149, 0.30);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   23. RESPONSIVE — TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .software-page .main-nav {
+        gap: 18px;
+    }
+
+    .software-page .main-nav > a:not(.btn) {
+        font-size: 13px;
+    }
+
+    .software-page .main-nav .btn {
+        padding: 0 19px;
+    }
+
+    .software-page .sd-intro-grid {
+        gap: 55px;
+    }
+
+    .software-page .sd-resources-heading,
+    .software-page .sd-project-heading {
+        gap: 45px;
+    }
+
+    .software-page .sd-expert-box {
+        gap: 50px;
+        padding: 50px;
+    }
+
+    .software-page .footer-grid {
+        gap: 35px;
+    }
+}
+
+
+/* =========================================================
+   24. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .software-page .top-bar-left {
+        display: none;
+    }
+
+    .software-page .top-bar-inner {
+        justify-content: center;
+    }
+
+    .software-page .header-inner {
+        min-height: 78px;
+    }
+
+    .software-page .main-nav {
+        display: none;
+    }
+
+    .software-page .mobile-menu-btn {
+        display: inline-flex;
+    }
+
+    .software-page .sd-hero {
+        min-height: 540px;
+    }
+
+    .software-page .sd-hero-inner {
+        padding: 85px 0;
+    }
+
+    .software-page .sd-hero-title {
+        font-size: clamp(44px, 8vw, 66px);
+    }
+
+    .software-page .sd-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .software-page .sd-roadmap-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .software-page .sd-resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .software-page .sd-resources-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .software-page .sd-material-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .software-page .sd-project-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .software-page .sd-project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .software-page .sd-expert-box {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .software-page .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   25. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .software-page .container,
+    .software-page .sd-container,
+    .software-page .sd-hero-inner {
+        width: min(100% - 32px, var(--sd-container));
+    }
+
+    .software-page .top-bar {
+        min-height: 44px;
+    }
+
+    .software-page .top-bar-inner {
+        min-height: 44px;
+    }
+
+    .software-page .top-bar-right {
+        gap: 12px;
+    }
+
+    .software-page .top-bar-right > a {
+        font-size: 11px;
+    }
+
+    .software-page .top-bar-right > a:first-child {
+        display: none;
+    }
+
+    .software-page .social-links {
+        gap: 5px;
+    }
+
+    .software-page .social-links a {
+        width: 31px;
+        height: 31px;
+
+        font-size: 11px;
+    }
+
+    .software-page .header-inner {
+        min-height: 72px;
+    }
+
+    .software-page .brand {
+        gap: 9px;
+    }
+
+    .software-page .brand-mark {
+        width: 43px;
+        height: 43px;
+
+        font-size: 11px;
+    }
+
+    .software-page .brand-text strong {
+        font-size: 14px;
+    }
+
+    .software-page .brand-text span {
+        font-size: 8px;
+        letter-spacing: 0.04em;
+    }
+
+    .software-page .mobile-menu-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .software-page .mobile-drawer {
+        max-width: 100%;
+        padding: 22px;
+    }
+
+    .software-page .sd-announcement {
+        min-height: auto;
+
+        flex-wrap: wrap;
+
+        gap: 5px 10px;
+
+        padding: 11px 16px;
+
+        text-align: center;
+
+        font-size: 10px;
+    }
+
+    .software-page .sd-announcement-label {
+        width: 100%;
+    }
+
+    .software-page .sd-announcement-text {
+        font-size: 10px;
+    }
+
+    .software-page .sd-announcement-link {
+        font-size: 10px;
+    }
+
+    .software-page .sd-hero {
+        min-height: auto;
+    }
+
+    .software-page .sd-hero-inner {
+        padding: 70px 0 78px;
+    }
+
+    .software-page .sd-hero-label {
+        margin-bottom: 17px;
+
+        font-size: 9px;
+        letter-spacing: 0.11em;
+    }
+
+    .software-page .sd-hero-label::before {
+        width: 18px;
+        margin-right: 8px;
+    }
+
+    .software-page .sd-hero-title {
+        margin-bottom: 20px;
+
+        font-size: clamp(40px, 12vw, 58px);
+        line-height: 1.03;
+    }
+
+    .software-page .sd-hero-title span {
+        display: block;
+    }
+
+    .software-page .sd-hero-description {
+        margin-bottom: 27px;
+
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .software-page .sd-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+
+        gap: 9px;
+    }
+
+    .software-page .sd-hero-btn {
+        width: 100%;
+    }
+
+    .software-page .sd-intro,
+    .software-page .sd-roadmap,
+    .software-page .sd-resources,
+    .software-page .sd-projects {
+        padding: 75px 0;
+    }
+
+    .software-page .sd-section-label {
+        margin-bottom: 12px;
+
+        font-size: 9px;
+    }
+
+    .software-page .sd-section-title {
+        font-size: 36px;
+        line-height: 1.08;
+    }
+
+    .software-page .sd-intro-content p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .software-page .sd-intro-highlight {
+        padding: 16px 17px;
+
+        font-size: 12px;
+    }
+
+    .software-page .sd-roadmap-heading {
+        margin-bottom: 35px;
+    }
+
+    .software-page .sd-roadmap-heading p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .software-page .sd-roadmap-grid,
+    .software-page .sd-resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .software-page .sd-roadmap-card {
+        min-height: 275px;
+
+        padding: 25px;
+    }
+
+    .software-page .sd-resource-card {
+        min-height: 260px;
+
+        padding: 25px;
+    }
+
+    .software-page .sd-resources-heading {
+        margin-bottom: 35px;
+    }
+
+    .software-page .sd-resources-heading-text p {
+        font-size: 13px;
+    }
+
+    .software-page .sd-learning-material {
+        padding: 70px 0;
+    }
+
+    .software-page .sd-material-card {
+        padding: 28px 24px;
+    }
+
+    .software-page .sd-material-card h3 {
+        font-size: 27px;
+    }
+
+    .software-page .sd-project-heading {
+        margin-bottom: 35px;
+    }
+
+    .software-page .sd-project-heading > p {
+        font-size: 13px;
+    }
+
+    .software-page .sd-project-card {
+        min-height: 300px;
+    }
+
+    .software-page .sd-expert {
+        padding: 70px 0;
+    }
+
+    .software-page .sd-expert-box {
+        gap: 38px;
+
+        padding: 35px 25px;
+
+        border-radius: 16px;
+    }
+
+    .software-page .sd-expert-intro h2 {
+        font-size: 39px;
+    }
+
+    .software-page .sd-expert-intro p {
+        font-size: 13px;
+    }
+
+    .software-page .sd-expert-list {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .software-page .sd-skills {
+        padding: 45px 0;
+    }
+
+    .software-page .sd-skills-list {
+        justify-content: flex-start;
+    }
+
+    .software-page .sd-skill {
+        min-height: 35px;
+
+        padding: 0 12px;
+
+        font-size: 11px;
+    }
+
+    .software-page .sd-final-cta {
+        padding: 70px 0;
+    }
+
+    .software-page .sd-final-cta-box {
+        min-height: auto;
+
+        padding: 42px 25px;
+    }
+
+    .software-page .sd-final-cta-title {
+        font-size: 40px;
+    }
+
+    .software-page .sd-final-cta-text {
+        font-size: 13px;
+    }
+
+    .software-page .sd-final-cta-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .software-page .sd-final-btn {
+        width: 100%;
+    }
+
+    .software-page .site-footer {
+        padding-top: 55px;
+    }
+
+    .software-page .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 38px;
+
+        padding-bottom: 45px;
+    }
+
+    .software-page .footer-brand > p {
+        font-size: 12px;
+    }
+
+    .software-page .footer-bottom {
+        min-height: auto;
+
+        align-items: flex-start;
+        flex-direction: column;
+
+        padding: 20px 0;
+
+        gap: 7px;
+    }
+
+    .software-page .footer-bottom p {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   26. VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .software-page .sd-hero-title {
+        font-size: 37px;
+    }
+
+    .software-page .sd-section-title {
+        font-size: 32px;
+    }
+
+    .software-page .sd-final-cta-title {
+        font-size: 35px;
+    }
+
+    .software-page .top-bar-right > a:nth-child(2) {
+        display: none;
+    }
+
+    .software-page .social-links a:nth-child(4) {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   27. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .software-page *,
+    .software-page *::before,
+    .software-page *::after {
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   END OF SOFTWARE DEVELOPMENT CSS
+========================================================= */
