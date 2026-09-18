@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Study Materials | ECE Community</title>
+
+    <!-- Main Website CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Software Development CSS -->
+    <link rel="stylesheet" href="css/software-development.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="software-page">
+
+<!-- ================= ECE COMMUNITY HEADER ================= -->
+<header class="ece-header">
+    <div class="ece-nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="ece-brand">
+            <div class="ece-logo-box">
+                <span>ECE</span>
+            </div>
+            <div class="ece-brand-text">
+                <h1>ECE COMMUNITY</h1>
+                <p>CONNECT • LEARN • BUILD TOGETHER</p>
+            </div>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="ece-menu-btn" id="eceMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Navigation -->
+        <nav class="ece-navigation" id="eceNavigation">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="software-development.html">Software Dev</a>
+            <a href="#topics">Topics</a>
+            <a href="#study-materials">Study Materials</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html#join" class="ece-join-btn">JOIN COMMUNITY</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="sd-hero">
+    <div class="sd-container">
+        <p class="sd-label">
+            <a href="software-development.html" style="color: #d5ad68; text-decoration: underline; margin-right: 8px;">
+                <i class="fas fa-arrow-left"></i> Software Development
+            </a> 
+            • PROGRAMMING MODULE
+        </p>
+        <h1>Programming Study Materials</h1>
+        <p>
+            Master programming concepts step-by-step from absolute basics to advanced topics. Access structured study notes, code examples, and core concepts.
+        </p>
+        <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+            <a href="#topics" class="sd-btn">
+                <i class="fas fa-book-open" style="margin-right: 6px;"></i> Explore Topics
+            </a>
+            <a href="#quick-notes" class="sd-btn" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);">
+                <i class="fas fa-code" style="margin-right: 6px;"></i> View Topics List
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= TOPICS ROADMAP ================= -->
+<section class="sd-section" id="topics">
+    <div class="sd-container">
+        <div class="sd-heading">
+            <p>PROGRAMMING TOPICS</p>
+            <h2>Select a Programming Topic</h2>
+            <span>
+                Click on any topic card to jump directly to its study materials and notes breakdown.
+            </span>
+        </div>
+
+        <div class="sd-grid">
+
+            <!-- Intro to Programming -->
+            <a href="study materials\software development\roha 2.pdf" class="sd-card topic-card-btn" onclick="openTopic('topic-intro')">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Intro to Programming</h3>
+                <p>
+                    Variables, data types, operators, conditionals, loops, functions, and logic building.
+                </p>
+            </a>
+
+            <!-- HTML -->
+            <a href="#topic-html" class="sd-card topic-card-btn" onclick="openTopic('topic-html')">
+                <i class="fab fa-html5" style="color: #e44d26;"></i>
+                <h3>HTML</h3>
+                <p>
+                    Structure, semantic HTML5, tags, forms, tables, links, images, and audio/video elements.
+                </p>
+            </a>
+
+            <!-- CSS -->
+            <a href="#topic-css" class="sd-card topic-card-btn" onclick="openTopic('topic-css')">
+                <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+                <h3>CSS</h3>
+                <p>
+                    Styling, selectors, Box Model, Flexbox, CSS Grid, animations, and responsive web design.
+                </p>
+            </a>
+
+            <!-- JavaScript -->
+            <a href="#topic-js" class="sd-card topic-card-btn" onclick="openTopic('topic-js')">
+                <i class="fab fa-js" style="color: #f7df1e; background: #333; padding: 2px 5px; border-radius: 4px;"></i>
+                <h3>JavaScript</h3>
+                <p>
+                    Variables, DOM manipulation, event listeners, ES6+, promises, async/await & APIs.
+                </p>
+            </a>
+
+            <!-- C & C++ -->
+            <a href="#topic-c" class="sd-card topic-card-btn" onclick="openTopic('topic-c')">
+                <i class="fas fa-code"></i>
+                <h3>C / C++</h3>
+                <p>
+                    Pointers, memory management, arrays, structures, classes, and Object-Oriented Programming.
+                </p>
+            </a>
+
+            <!-- Python -->
+            <a href="#topic-python" class="sd-card topic-card-btn" onclick="openTopic('topic-python')">
+                <i class="fab fa-python" style="color: #3776ab;"></i>
+                <h3>Python</h3>
+                <p>
+                    Clean syntax, data structures (lists, dicts), file handling, modules, and OOPs.
+                </p>
+            </a>
+
+            <!-- Java -->
+            <a href="#topic-java" class="sd-card topic-card-btn" onclick="openTopic('topic-java')">
+                <i class="fab fa-java" style="color: #f89820;"></i>
+                <h3>Java</h3>
+                <p>
+                    Core Java, JVM architecture, OOP concepts, interfaces, exception handling & Collections.
+                </p>
+            </a>
+
+            <!-- DSA -->
+            <a href="#topic-dsa" class="sd-card topic-card-btn" onclick="openTopic('topic-dsa')">
+                <i class="fas fa-sitemap"></i>
+                <h3>Data Structures & Algorithms</h3>
+                <p>
+                    Arrays, Linked Lists, Stacks, Queues, Trees, Searching, Sorting, and Algorithm Complexity.
+                </p>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= STUDY MATERIAL DETAILS ================= -->
+<section class="sd-material" id="study-materials">
+    <div class="sd-container">
+
+        <div class="sd-heading">
+            <p>DETAILED STUDY MATERIALS</p>
+            <h2>Programming Topic Notes</h2>
+            <span>
+                Access complete notes, topic details, and reference guides below.
+            </span>
+        </div>
+
+        <!-- Intro to Programming Material -->
+        <div id="topic-intro" class="sd-resource" style="margin-bottom: 25px; align-items: flex-start;">
+            <div style="width: 100%;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3 style="margin: 0; font-size: 22px;">1. Intro to Programming</h3>
+                </div>
+                <p style="margin-bottom: 15px;">
+                    Learn how computers process code, problem-solving logic, flowcharts, pseudocode, and core programming building blocks.
+                </p>
+                <div style="background: var(--white); padding: 18px; border-radius: 8px; border: 1px solid #e8e3da;">
+                    <h4 style="color: var(--dark); margin-bottom: 10px;"><i class="fas fa-list-check" style="color: var(--red); font-size: 16px; margin-right: 8px;"></i> Key Topics Covered:</h4>
+                    <ul style="padding-left: 20px; color: var(--light-text); font-size: 14px; line-height: 1.8; list-style-type: disc;">
+                        <li>What is Programming & Algorithmic Thinking</li>
+                        <li>Variables, Constants & Data Types (Integer, Float, String, Boolean)</li>
+                        <li>Input / Output Operations & Formatting</li>
+                        <li>Control Statements: <code>if</code>, <code>if-else</code>, <code>switch-case</code></li>
+                        <li>Loops & Iteration: <code>for</code>, <code>while</code>, <code>do-while</code></li>
+                        <li>Functions, Scope & Modularity</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="study materials/software development/roha 2.pdf" class="sd-btn" style="padding: 9px 16px; font-size: 13px;">
+                        <i class="fas fa-file-lines" style="margin-right: 6px;"></i> Read Full Notes
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- HTML Material -->
+        <div id="topic-html" class="sd-resource" style="margin-bottom: 25px; align-items: flex-start;">
+            <div style="width: 100%;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
+                    <i class="fab fa-html5" style="color: #e44d26;"></i>
+                    <h3 style="margin: 0; font-size: 22px;">2. HTML (HyperText Markup Language)</h3>
+                </div>
+                <p style="margin-bottom: 15px;">
+                    Understand web page construction, markup elements, attributes, forms, and modern semantic HTML5 standards.
+                </p>
+                <div style="background: var(--white); padding: 18px; border-radius: 8px; border: 1px solid #e8e3da;">
+                    <h4 style="color: var(--dark); margin-bottom: 10px;"><i class="fas fa-list-check" style="color: var(--red); font-size: 16px; margin-right: 8px;"></i> Key Topics Covered:</h4>
+                    <ul style="padding-left: 20px; color: var(--light-text); font-size: 14px; line-height: 1.8; list-style-type: disc;">
+                        <li>HTML Document Skeleton (<code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>)</li>
+                        <li>Headings, Paragraphs, Text Formatting & Lists</li>
+                        <li>Hyperlinks (<code>&lt;a href="..."&gt;</code>) & Media Tags (<code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>)</li>
+                        <li>HTML Tables & Form Elements (Inputs, Labels, Buttons, Textarea)</li>
+                        <li>Semantic Tags: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code></li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="study materials/software development/programming/html-guide.html" class="sd-btn" style="padding: 9px 16px; font-size: 13px;">
+                        <i class="fas fa-file-lines" style="margin-right: 6px;"></i> Read Full Notes
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CSS Material -->
+        <div id="topic-css" class="sd-resource" style="margin-bottom: 25px; align-items: flex-start;">
+            <div style="width: 100%;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
+                    <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+                    <h3 style="margin: 0; font-size: 22px;">3. CSS (Cascading Style Sheets)</h3>
+                </div>
+                <p style="margin-bottom: 15px;">
+                    Master web layout styling, responsive design rules, colors, typography, Flexbox, and CSS Grid layouts.
+                </p>
+                <div style="background: var(--white); padding: 18px; border-radius: 8px; border: 1px solid #e8e3da;">
+                    <h4 style="color: var(--dark); margin-bottom: 10px;"><i class="fas fa-list-check" style="color: var(--red); font-size: 16px; margin-right: 8px;"></i> Key Topics Covered:</h4>
+                    <ul style="padding-left: 20px; color: var(--light-text); font-size: 14px; line-height: 1.8; list-style-type: disc;">
+                        <li>CSS Syntax, Selectors (Element, Class, ID, Attribute, Pseudo-classes)</li>
+                        <li>The Box Model (Margin, Border, Padding, Content)</li>
+                        <li>Positioning (`static`, `relative`, `absolute`, `fixed`, `sticky`)</li>
+                        <li>Flexbox Layout Architecture (flex-direction, justify-content, align-items)</li>
+                        <li>CSS Grid System (grid-template-columns, gap)</li>
+                        <li>Media Queries & Responsive Web Design</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="study materials/software development/programming/css-guide.html" class="sd-btn" style="padding: 9px 16px; font-size: 13px;">
+                        <i class="fas fa-file-lines" style="margin-right: 6px;"></i> Read Full Notes
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript Material -->
+        <div id="topic-js" class="sd-resource" style="margin-bottom: 25px; align-items: flex-start;">
+            <div style="width: 100%;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
+                    <i class="fab fa-js" style="color: #f7df1e;"></i>
+                    <h3 style="margin: 0; font-size: 22px;">4. JavaScript</h3>
+                </div>
+                <p style="margin-bottom: 15px;">
+                    Bring web pages to life with client-side interactivity, DOM manipulation, events, and modern ES6 features.
+                </p>
+                <div style="background: var(--white); padding: 18px; border-radius: 8px; border: 1px solid #e8e3da;">
+                    <h4 style="color: var(--dark); margin-bottom: 10px;"><i class="fas fa-list-check" style="color: var(--red); font-size: 16px; margin-right: 8px;"></i> Key Topics Covered:</h4>
+                    <ul style="padding-left: 20px; color: var(--light-text); font-size: 14px; line-height: 1.8; list-style-type: disc;">
+                        <li>JavaScript Syntax, <code>var</code> vs <code>let</code> vs <code>const</code></li>
+                        <li>DOM Selection & Element Manipulation (<code>querySelector</code>, <code>innerHTML</code>, <code>classList</code>)</li>
+                        <li>Event Handling (<code>addEventListener</code>, Click, Input, Form Submit)</li>
+                        <li>ES6+ Features: Arrow functions, Template Literals, Destructuring, Spread operator</li>
+                        <li>Asynchronous JavaScript: Callbacks, Promises, <code>async/await</code>, <code>fetch()</code> API</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="study materials/software development/programming/javascript-guide.html" class="sd-btn" style="padding: 9px 16px; font-size: 13px;">
+                        <i class="fas fa-file-lines" style="margin-right: 6px;"></i> Read Full Notes
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- C & C++ Material -->
+        <div id="topic-c" class="sd-resource" style="margin-bottom: 25px; align-items: flex-start;">
+            <div style="width: 100%;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
+                    <i class="fas fa-code"></i>
+                    <h3 style="margin: 0; font-size: 22px;">5. C / C++ Fundamentals</h3>
+                </div>
+                <p style="margin-bottom: 15px;">
+                    Build strong core programming logic, understand low-level pointers, structures, and Object-Oriented concepts.
+                </p>
+                <div style="background: var(--white); padding: 18px; border-radius: 8px; border: 1px solid #e8e3da;">
+                    <h4 style="color: var(--dark); margin-bottom: 10px;"><i class="fas fa-list-check" style="color: var(--red); font-size: 16px; margin-right: 8px;"></i> Key Topics Covered:</h4>
+                    <ul style="padding-left: 20px; color: var(--light-text); font-size: 14px; line-height: 1.8; list-style-type: disc;">
+                        <li>C & C++ Syntax, Compiler Flow & Header Files</li>
+                        <li>Pointers, References & Dynamic Memory Allocation (`malloc`, `free`, `new`, `delete`)</li>
+                        <li>Structures (`struct`), Unions & Enums</li>
+                        <li>OOP Principles: Classes, Objects, Inheritance, Polymorphism, Encapsulation</li>
+                        <li>C++ Standard Template Library (STL): Vectors, Maps, Sets, Stacks</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="study materials/software development/programming/c-cpp-guide.html" class="sd-btn" style="padding: 9px 16px; font-size: 13px;">
+                        <i class="fas fa-file-lines" style="margin-right: 6px;"></i> Read Full Notes
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Python Material -->
+        <div id="topic-python" class="sd-resource" style="margin-bottom: 25px; align-items: flex-start;">
+            <div style="width: 100%;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
+                    <i class="fab fa-python" style="color: #3776ab;"></i>
+                    <h3 style="margin: 0; font-size: 22px;">6. Python Programming</h3>
+                </div>
+                <p style="margin-bottom: 15px;">
+                    Learn Python's clean syntax, versatile built-in data structures, object-oriented design, and practical scripting.
+                </p>
+                <div style="background: var(--white); padding: 18px; border-radius: 8px; border: 1px solid #e8e3da;">
+                    <h4 style="color: var(--dark); margin-bottom: 10px;"><i class="fas fa-list-check" style="color: var(--red); font-size: 16px; margin-right: 8px;"></i> Key Topics Covered:</h4>
+                    <ul style="padding-left: 20px; color: var(--light-text); font-size: 14px; line-height: 1.8; list-style-type: disc;">
+                        <li>Python Data Types, Strings & Indentation Syntax</li>
+                        <li>Collections: Lists, Tuples, Dictionaries, Sets</li>
+                        <li>List Comprehensions & Lambda Functions</li>
+                        <li>File Handling (Reading/Writing Files) & Exception Handling</li>
+                        <li>Object-Oriented Python (Classes, `__init__`, Methods, Inheritance)</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="study materials/software development/programming/python-guide.html" class="sd-btn" style="padding: 9px 16px; font-size: 13px;">
+                        <i class="fas fa-file-lines" style="margin-right: 6px;"></i> Read Full Notes
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Java Material -->
+        <div id="topic-java" class="sd-resource" style="margin-bottom: 25px; align-items: flex-start;">
+            <div style="width: 100%;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
+                    <i class="fab fa-java" style="color: #f89820;"></i>
+                    <h3 style="margin: 0; font-size: 22px;">7. Java Fundamentals</h3>
+                </div>
+                <p style="margin-bottom: 15px;">
+                    Master Java platform independence, JVM execution, Object-Oriented Principles, and the Collections Framework.
+                </p>
+                <div style="background: var(--white); padding: 18px; border-radius: 8px; border: 1px solid #e8e3da;">
+                    <h4 style="color: var(--dark); margin-bottom: 10px;"><i class="fas fa-list-check" style="color: var(--red); font-size: 16px; margin-right: 8px;"></i> Key Topics Covered:</h4>
+                    <ul style="padding-left: 20px; color: var(--light-text); font-size: 14px; line-height: 1.8; list-style-type: disc;">
+                        <li>Java Virtual Machine (JVM), JDK, JRE Architecture</li>
+                        <li>Core Syntax, Data Types & Wrapper Classes</li>
+                        <li>OOPs Concepts: Inheritance, Polymorphism, Abstraction, Interfaces</li>
+                        <li>Exception Handling (`try-catch-finally`, Custom Exceptions)</li>
+                        <li>Java Collections Framework (ArrayList, HashMap, HashSet, LinkedList)</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="study materials/software development/programming/java-guide.html" class="sd-btn" style="padding: 9px 16px; font-size: 13px;">
+                        <i class="fas fa-file-lines" style="margin-right: 6px;"></i> Read Full Notes
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DSA Material -->
+        <div id="topic-dsa" class="sd-resource" style="margin-bottom: 25px; align-items: flex-start;">
+            <div style="width: 100%;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
+                    <i class="fas fa-sitemap"></i>
+                    <h3 style="margin: 0; font-size: 22px;">8. Data Structures & Algorithms (DSA)</h3>
+                </div>
+                <p style="margin-bottom: 15px;">
+                    Develop advanced problem-solving techniques, time/space complexity evaluation, data structures, and algorithmic patterns.
+                </p>
+                <div style="background: var(--white); padding: 18px; border-radius: 8px; border: 1px solid #e8e3da;">
+                    <h4 style="color: var(--dark); margin-bottom: 10px;"><i class="fas fa-list-check" style="color: var(--red); font-size: 16px; margin-right: 8px;"></i> Key Topics Covered:</h4>
+                    <ul style="padding-left: 20px; color: var(--light-text); font-size: 14px; line-height: 1.8; list-style-type: disc;">
+                        <li>Big-O Notation, Time & Space Complexity Analysis</li>
+                        <li>Linear Structures: Arrays, Strings, Linked Lists, Stacks, Queues</li>
+                        <li>Searching Algorithms (Linear Search, Binary Search)</li>
+                        <li>Sorting Algorithms (Bubble, Selection, Insertion, Merge, Quick Sort)</li>
+                        <li>Non-Linear Structures: Trees, Binary Search Trees, Graphs, Hashing</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="study materials/software development/programming/dsa-guide.html" class="sd-btn" style="padding: 9px 16px; font-size: 13px;">
+                        <i class="fas fa-file-lines" style="margin-right: 6px;"></i> Read Full Notes
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="sd-cta">
+    <div class="sd-container">
+        <h2>Ready to Practice Programming?</h2>
+        <p>
+            Build real projects, practice coding challenges, and grow with the ECE Community.
+        </p>
+        <a href="software-development.html" class="sd-btn">
+            Back to Software Development
+        </a>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="sd-footer">
+    <div class="sd-container">
+        <p>
+            © <span id="year"></span> ECE Community. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+<script src="js/software-development.js"></script>
+<script>
+    function openTopic(topicId) {
+        const el = document.getElementById(topicId);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.style.transition = 'outline 0.3s ease';
+            el.style.outline = '2px solid var(--red)';
+            setTimeout(() => {
+                el.style.outline = 'none';
+            }, 2000);
+        }
+    }
+</script>
+</body>
+</html>

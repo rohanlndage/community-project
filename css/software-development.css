@@ -303,6 +303,13 @@
 
 }
 
+.sd-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+}
+
 
 /* Hero */
 
@@ -639,4 +646,22 @@
     .sd-cta h2 {
         font-size: 30px;
     }
+}
+
+/* ================= CLICKABLE PROGRAMMING CARD ================= */
+
+a.sd-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a.sd-card h3,
+a.sd-card p {
+    color: inherit;
+}
+
+a.sd-card:hover {
+    text-decoration: none;
 }
