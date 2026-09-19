@@ -114,3 +114,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+// ==========================================
+// COMING SOON POPUP
+// ==========================================
+
+function showComingSoon(sectionName) {
+
+    const popup = document.getElementById("comingSoonPopup");
+    const text = document.getElementById("comingSoonText");
+
+    if (!popup || !text) return;
+
+    text.textContent =
+        sectionName + " is coming soon. Stay updated!";
+
+    popup.classList.add("active");
+}
+
+
+function closeComingSoon() {
+
+    const popup = document.getElementById("comingSoonPopup");
+
+    if (!popup) return;
+
+    popup.classList.remove("active");
+}
+
+
+// Close popup when clicking outside the box
+document.addEventListener("click", function (event) {
+
+    const popup = document.getElementById("comingSoonPopup");
+
+    if (
+        popup &&
+        event.target === popup
+    ) {
+        popup.classList.remove("active");
+    }
+
+});
