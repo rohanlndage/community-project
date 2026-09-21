@@ -1,0 +1,446 @@
+/* ================= GENERAL ================= */
+
+.english-page {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #faf8f4;
+    color: #222;
+}
+
+.ec-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ================= HERO ================= */
+
+.ec-hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #f8f1e8,
+        #fff
+    );
+}
+
+.ec-hero-content {
+    max-width: 750px;
+    padding: 80px 0;
+}
+
+.ec-small-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.ec-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 58px;
+    line-height: 1.1;
+    margin: 0 0 25px;
+}
+
+.ec-hero h1 span {
+    display: block;
+}
+
+.ec-hero-description {
+    max-width: 650px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.ec-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    background: #8b1e2d;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.ec-primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ================= SECTION ================= */
+
+.ec-section {
+    padding: 90px 0;
+}
+
+.ec-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.ec-heading p {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.ec-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin: 0 0 15px;
+}
+
+.ec-heading span {
+    color: #777;
+    font-size: 15px;
+}
+
+
+/* ================= GRID ================= */
+
+.ec-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+
+/* ================= CARD ================= */
+
+.ec-card {
+    background: #fff;
+
+    padding: 30px 25px;
+
+    border: 1px solid #eee;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.ec-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.ec-card i {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.ec-card h3 {
+    font-size: 19px;
+    margin: 0 0 12px;
+}
+
+.ec-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ================= MATERIAL ================= */
+
+.ec-material {
+    background: #f3eee7;
+}
+
+.ec-resource {
+    background: #fff;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    text-decoration: none;
+    color: inherit;
+
+    border-radius: 10px;
+
+    border: 1px solid #eee;
+
+    transition: 0.3s;
+}
+
+.ec-resource:hover {
+    transform: translateY(-5px);
+}
+
+.ec-resource > i {
+    font-size: 30px;
+}
+
+.ec-resource div {
+    flex: 1;
+}
+
+.ec-resource h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.ec-resource p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.ec-resource span {
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* ================= PRACTICE ================= */
+
+.ec-practice-card {
+    cursor: pointer;
+}
+
+
+/* ================= SKILLS ================= */
+
+.ec-skills {
+    padding: 90px 0;
+    background: #fff;
+}
+
+.ec-skills-list {
+    max-width: 850px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.ec-skills-list div {
+    padding: 18px 20px;
+
+    background: #faf8f4;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+.ec-skills-list i {
+    margin-right: 10px;
+}
+
+
+/* ================= CTA ================= */
+
+.ec-cta {
+    padding: 90px 0;
+
+    text-align: center;
+
+    background: #f3eee7;
+}
+
+.ec-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.ec-cta p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.ec-footer {
+    background: #171717;
+    color: white;
+
+    padding: 35px 0;
+}
+
+.ec-footer .ec-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.ec-footer h3 {
+    margin: 0 0 5px;
+}
+
+.ec-footer p {
+    margin: 0;
+    color: #aaa;
+    font-size: 12px;
+}
+
+
+/* ================= POPUP ================= */
+
+.coming-soon-popup {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    z-index: 99999;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon-box {
+    position: relative;
+
+    width: 90%;
+    max-width: 420px;
+
+    background: white;
+
+    padding: 40px 30px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.coming-soon-box button {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    border: none;
+    background: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.coming-soon-box > i {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.coming-soon-box h2 {
+    margin-bottom: 10px;
+}
+
+.coming-soon-box p {
+    line-height: 1.6;
+    color: #666;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .ec-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ec-hero h1 {
+        font-size: 48px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .ec-section {
+        padding: 65px 0;
+    }
+
+    .ec-hero {
+        min-height: 430px;
+    }
+
+    .ec-hero-content {
+        padding: 60px 0;
+    }
+
+    .ec-hero h1 {
+        font-size: 40px;
+    }
+
+    .ec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ec-skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .ec-resource {
+        align-items: flex-start;
+    }
+
+    .ec-resource span {
+        display: none;
+    }
+
+    .ec-footer .ec-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .ec-hero h1 {
+        font-size: 34px;
+    }
+
+    .ec-heading h2 {
+        font-size: 30px;
+    }
+
+    .ec-hero-description {
+        font-size: 15px;
+    }
+
+}
