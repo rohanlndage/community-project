@@ -1,0 +1,20 @@
+{
+  "name": "dyptc-community-project",
+  "version": "1.0.0",
+  "description": "DYPTC Community Website Project - Unit and Integration Tests",
+  "main": "js/script.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/user-event": "^14.5.2",
+    "jsdom": "^26.0.0",
+    "vitest": "^3.0.0"
+  }
+}

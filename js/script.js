@@ -362,7 +362,7 @@ function initJoinModal() {
 
             <h3
               style="font-family: var(--font-display); font-size: 24px; color: var(--color-navy); margin-bottom: 8px;">
-              Welcome to ECE!
+              Welcome to DYPTC!
             </h3>
 
             <p
