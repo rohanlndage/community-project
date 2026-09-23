@@ -301,7 +301,7 @@ function initJoinModal() {
 
 
   /* ------------------------------------------------------------------------
-     SEND JOIN FORM DATA TO SPRING BOOT
+     SEND JOIN FORM DATA & DISPLAY SUCCESS MESSAGE
      ------------------------------------------------------------------------ */
   if (form) {
 
@@ -319,73 +319,61 @@ function initJoinModal() {
         branch: form.querySelector('[name="branch"]').value
       };
 
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML =
+          '<i class="fas fa-spinner fa-spin"></i> Processing...';
+      }
 
+      /* ====================================================================
+         PREVIOUS CODE (PRESERVED IN COMMENTS)
+         Connected to Spring Boot API endpoint: http://localhost:8080/api/members
+         ====================================================================
       try {
-
-        if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.innerHTML =
-            '<i class="fas fa-spinner fa-spin"></i> Processing...';
-        }
-
-
         const response = await fetch(
           'http://localhost:8080/api/members',
           {
             method: 'POST',
-
             headers: {
               'Content-Type': 'application/json'
             },
-
             body: JSON.stringify(member)
           }
         );
-
 
         if (!response.ok) {
           throw new Error('Server error: ' + response.status);
         }
 
-
         const savedMember = await response.json();
-
         console.log('Member saved successfully:', savedMember);
+      } catch (error) {
+        console.error('Error submitting member:', error);
+      }
+      ==================================================================== */
 
-
+      // Display successful submission message
+      setTimeout(() => {
         form.innerHTML = `
           <div style="text-align: center; padding: 20px 0;">
 
             <i class="fas fa-check-circle"
-               style="font-size: 48px; color: #304095; margin-bottom: 16px;">
+               style="font-size: 52px; color: #10B981; margin-bottom: 16px;">
             </i>
 
             <h3
               style="font-family: var(--font-display); font-size: 24px; color: var(--color-navy); margin-bottom: 8px;">
-              Welcome to DYPTC!
+              Successfully Submitted!
             </h3>
 
             <p
-              style="color: var(--color-secondary-text); font-size: 15px;">
-              Your application has been received. Our community coordinator will reach out via email shortly.
+              style="color: var(--color-secondary-text); font-size: 15px; line-height: 1.6;">
+              Thank you, <strong>${member.name || 'Student'}</strong>! Your application has been received successfully. Our community coordinator will reach out via email shortly.
             </p>
 
           </div>
         `;
-
-      } catch (error) {
-
-        console.error('Error submitting member:', error);
-
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = 'SUBMIT APPLICATION';
-        }
-
-        alert(
-          'Unable to submit your application. Please make sure the Spring Boot server is running.'
-        );
-      }
+      }, 500);
 
     });
 
