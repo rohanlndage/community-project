@@ -1,0 +1,10 @@
+POST https://ece-backend-j6ao.vercel.app/api/members
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "phone": "9876543210",
+  "email": "test@example.com",
+  "institute": "Test College",
+  "branch": "Computer Engineering"
+}
